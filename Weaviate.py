@@ -3,15 +3,12 @@ import os
 import logging
 import hashlib
 import re
-from typing import List, Dict, Any, Optional, Tuple
-from dataclasses import dataclass, asdict
+from typing import List, Dict, Any, Optional
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-
-# Load environment variables from .env file
 from dotenv import load_dotenv
 load_dotenv()
-
 import weaviate
 from weaviate.classes.init import Auth
 import weaviate.classes.config as wc
@@ -19,19 +16,13 @@ from weaviate.classes.query import Filter, MetadataQuery
 from sentence_transformers import SentenceTransformer
 from rich.console import Console
 from rich.panel import Panel
-
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-# Initialize rich console
 console = Console()
 
 @dataclass
 class EnhancedGitHubTool:
     """Enhanced schema for GitHub MCP tools with semantic enrichment"""
-    
-    # Core identifiers
     tool_name: str
     section: str
     full_qualified_name: str
@@ -368,7 +359,7 @@ class EnhancedWeaviateService:
         self.url = url
         self.api_key = api_key
         self.client = None
-        self.collection_name = "EnhancedGitHubMCPTools"
+        self.collection_name = "EnhancedGitHubMCPToolsStorage"
         self._connect()
     
     def _connect(self):

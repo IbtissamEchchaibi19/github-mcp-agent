@@ -36,8 +36,6 @@ class MCPClient:
                 text=True,
                 bufsize=0
             )
-            
-            # Wait for server to start
             time.sleep(self.server_timeout)
             
             if self.process.poll() is not None:
@@ -74,25 +72,17 @@ class MCPClient:
         self.request_id += 1
         
         try:
-            # Send request
             request_json = json.dumps(request) + '\n'
             self.process.stdin.write(request_json)
             self.process.stdin.flush()
-            
-            # Read response
             response_line = self.process.stdout.readline()
             if not response_line:
                 raise MCPClientError(f"No response received for method: {method}")
-            
             response = json.loads(response_line.strip())
-            
-            # Check for errors
             if "error" in response:
                 error = response["error"]
                 raise MCPClientError(f"Server error: {error.get('message', 'Unknown error')}")
-            
-            return response
-            
+            return response    
         except json.JSONDecodeError as e:
             raise MCPClientError(f"Invalid JSON response: {e}")
         except Exception as e:
@@ -102,9 +92,7 @@ class MCPClient:
         """Initialize the MCP server"""
         if self.initialized:
             return True
-        
         logger.info("Initializing MCP server...")
-        
         params = {
             "protocolVersion": "2024-11-05",
             "capabilities": {
@@ -116,10 +104,8 @@ class MCPClient:
                 "version": "1.0.0"
             }
         }
-        
         try:
             response = self.send_request("initialize", params)
-            
             if "result" in response:
                 self.initialized = True
                 logger.info("MCP server initialized successfully")

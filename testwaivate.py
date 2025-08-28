@@ -7,7 +7,6 @@ A RAG-based chatbot for querying GitHub MCP tools using Weaviate and Gemini.
 import json
 import os
 import logging
-import asyncio
 from typing import List, Dict, Any, Optional
 from dataclasses import dataclass
 from pathlib import Path
