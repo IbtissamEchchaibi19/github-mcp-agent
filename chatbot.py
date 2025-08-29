@@ -280,10 +280,7 @@ class SimplifiedGitHubMCPChatbot:
     
     def _get_previous_tool_details(self, messages: List[BaseMessage]) -> List[Dict[str, Any]]:
         """Get tool details from conversation memory"""
-        # Get the thread's current state to access stored tool_details
         try:
-            # Look for stored tool_details in the workflow state
-            # This is a workaround - we'll use a different approach
             return getattr(self, '_last_tool_details', [])
         except:
             return []
