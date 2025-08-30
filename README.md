@@ -222,66 +222,6 @@ python chatbot.py
 
 The project includes LangGraph Studio compatibility for visual workflow debugging and monitoring.
 
-## Usage Examples
-
-### Example : Creating an Issue
-
-**User**: "I want to create a new issue"
-
-**System Response**:
-```
-Here are the relevant tools for issue management:
-
-1. create_issue - Create a new issue in a repository
-2. list_issues - List issues in a repository
-3. get_issue - Get details of a specific issue
-4. update_issue - Update an existing issue
-5. close_issue - Close an issue
-
-Choose a number (1-5) to see parameters and execute the tool.
-```
-
-**User**: "1"
-
-**System Response**:
-```
-Tool: create_issue
-Section: Issues
-Description: Create a new issue in a repository
-
-Required Parameters:
-  • owner
-  • repo
-  • title
-
-Optional Parameters:
-  • body
-  • assignees
-  • labels
-
-Let's collect the parameters!
-
-First required parameter: owner
-Please enter the value:
-```
-
-**User**: "microsoft"
-
-**System**: "Got owner: microsoft. Next required parameter: repo. Please enter the value:"
-
-**User**: "vscode"
-
-**System**: "Got repo: vscode. Next required parameter: title. Please enter the value:"
-
-**User**: "Bug in syntax highlighting"
-
-**System**: "All required parameters collected! Optional parameters available: body, assignees, labels. Do you want to provide optional parameters? (yes/no) or type 'execute' to run the tool now:"
-
-**User**: "execute"
-
-**System**: "Executing create_issue with parameters... Tool executed successfully!"
-
-
 ## License
 
 This project is designed for educational and development purposes. Ensure compliance with GitHub API terms of service and Docker usage policies when deploying in production environments.
