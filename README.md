@@ -138,7 +138,7 @@ The database implements a three-tier search approach:
 2. Create a virtual environment:
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+venv\Scripts\activate
 ```
 3. Install dependencies:
 ```bash
@@ -157,7 +157,7 @@ Create a `.env` file in the project root:
 GROQ_API_KEY=your_groq_api_key_here
 GITHUB_PERSONAL_ACCESS_TOKEN=your_github_token_here
 WEAVIATE_URL=http://localhost:8080
-WEAVIATE_API_KEY=your_weaviate_key_here  # Optional for cloud
+WEAVIATE_API_KEY=your_weaviate_key_here  
 EMBEDDING_MODEL=all-MiniLM-L6-v2
 LANGSMITH_TRACING="true"
 LANGSMITH_ENDPOINT=https://api.smith.langchain.com
@@ -281,60 +281,6 @@ Please enter the value:
 
 **System**: "Executing create_issue with parameters... Tool executed successfully!"
 
-## Key Features
-
-### Intelligent Tool Discovery
-- Semantic search across 100+ GitHub MCP tools
-- Intent-based filtering and ranking
-- Context-aware tool recommendations
-
-### Interactive Parameter Collection
-- Step-by-step parameter gathering
-- Required vs optional parameter handling
-- Input validation and error recovery
-
-### Real-time MCP Execution
-- Direct integration with GitHub MCP server
-- Docker-based isolation and security
-- Comprehensive error handling and reporting
-
-### Conversation Memory
-- Persistent conversation state
-- Multi-turn interaction support
-- Context preservation across sessions
-
-## Troubleshooting
-
-### Common Issues
-
-**Database Connection Errors**
-- Ensure Weaviate is running and accessible
-- Check firewall settings for port 8080
-- Verify API keys for cloud instances
-
-**MCP Server Failures**
-- Confirm Docker is running and MCP Toolkits are enabled
-- Validate GitHub token permissions
-- Check network connectivity
-
-**Tool Discovery Issues**
-- Verify JSON file format and completeness
-- Ensure embedding model is properly loaded
-- Check Weaviate schema creation
-
-**Parameter Collection Problems**
-- Review conversation state in debug output
-- Ensure proper message flow through workflow
-- Validate tool parameter schemas
-
-## Contributing
-
-The project welcomes contributions in areas including:
-- Additional MCP server integrations
-- Enhanced semantic analysis algorithms
-- Improved conversation flow patterns
-- Performance optimizations
-- Documentation improvements
 
 ## License
 
