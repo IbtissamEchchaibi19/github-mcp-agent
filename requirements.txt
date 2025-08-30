@@ -1,0 +1,7 @@
+langgraph>=0.2.0
+langgraph-cli
+langchain-groq
+langchain-core
+python-dotenv
+weaviate-client
+typing-extensions

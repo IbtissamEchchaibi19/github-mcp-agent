@@ -12,7 +12,6 @@ from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, AIMessage, BaseMessage
 from langchain_core.tools import tool
 from Weaviate import EnhancedGitHubMCPStorage
-from prompts import SIMPLE_SYSTEM_PROMPT
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
@@ -812,5 +811,25 @@ def main():
     except Exception as e:
         print(f"Failed to initialize chatbot: {e}")
 
+
+def create_graph():
+    """Factory function for LangGraph Studio"""
+    JSON_FILE_PATH = "github_mcp_tools.json"
+    WEAVIATE_URL = os.getenv("WEAVIATE_URL", "http://localhost:8080")
+    WEAVIATE_API_KEY = os.getenv("WEAVIATE_API_KEY")
+    
+    chatbot = EnhancedGitHubMCPChatbot(
+        json_file_path=JSON_FILE_PATH,
+        weaviate_url=WEAVIATE_URL,
+        weaviate_api_key=WEAVIATE_API_KEY
+    )
+    
+    return chatbot.workflow
+
+# Export the graph for LangGraph Studio
+graph = create_graph()
+
 if __name__ == "__main__":
     main()
+
+

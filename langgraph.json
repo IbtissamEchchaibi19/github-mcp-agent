@@ -1,0 +1,9 @@
+{
+    "dependencies": [
+        "./requirements.txt"
+    ],
+    "graphs": {
+        "github_mcp_chatbot": "./Agent.py:graph"
+    },
+    "env": ".env"
+}

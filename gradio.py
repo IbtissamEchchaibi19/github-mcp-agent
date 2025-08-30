@@ -12,7 +12,6 @@ from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, AIMessage, BaseMessage
 from langchain_core.tools import tool
 from Weaviate import EnhancedGitHubMCPStorage
-from prompts import SIMPLE_SYSTEM_PROMPT
 import gradio as gr
 
 load_dotenv()
