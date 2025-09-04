@@ -7,10 +7,10 @@ The GitHub MCP Tools Agent is an intelligent conversational interface that bridg
 ## Architecture Overview
 
 <p align="center">
-  <img src="https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/6c2eab9b0ea31370058a99181c249260d803381e/project%20represnatation.png" alt="Architecture Diagram" width="500"/>
+  <img src="https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/6c2eab9b0ea31370058a99181c249260d803381e/project%20represnatation.png" alt="Architecture Diagram" width="900"/>
 </p>
 
-you cn see the demo here in this video 
+you can see the demo here in this video 
 [Watch Video](https://drive.google.com/file/d/YOUR_FILE_ID/view)
 
 ## Core Components
@@ -32,10 +32,10 @@ The system employs a multi-layered approach to tool storage:
 - **Intent Extraction**: Natural language processing to understand user intent and apply appropriate filters
 images
 <p align="center">
-  <img src="https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/6c2eab9b0ea31370058a99181c249260d803381e/weiavate1.png" alt="Architecture Diagram" width="500"/>
+  <img src="https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/6c2eab9b0ea31370058a99181c249260d803381e/weiavate1.png" alt="Architecture Diagram" width="900"/>
 </p>
 <p align="center">
-  <img src="https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/6c2eab9b0ea31370058a99181c249260d803381e/weaivate2.png" alt="Architecture Diagram" width="500"/>
+  <img src="https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/6c2eab9b0ea31370058a99181c249260d803381e/weaivate2.png" alt="Architecture Diagram" width="900"/>
 </p>
 
 ### 2. Conversational Workflow Engine
@@ -95,10 +95,10 @@ This project leverages Docker's new MCP Toolkits feature, which provides:
 - **Resource Isolation**: Protected execution without affecting host system
 - **Version Management**: Consistent tool versions across environments
 <p align="center">
-  <img src="https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/6c2eab9b0ea31370058a99181c249260d803381e/dockerdashb.png" alt="Architecture Diagram" width="500"/>
+  <img src="https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/6c2eab9b0ea31370058a99181c249260d803381e/dockerdashb.png" alt="Architecture Diagram" width="900"/>
 </p>
 <p align="center">
-  <img src="https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/6c2eab9b0ea31370058a99181c249260d803381e/apiconfiguration.png" alt="Architecture Diagram" width="500"/>
+  <img src="https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/6c2eab9b0ea31370058a99181c249260d803381e/apiconfiguration.png" alt="Architecture Diagram" width="900"/>
 </p>
 ## Database Storage Strategy
 
