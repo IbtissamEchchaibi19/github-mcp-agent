@@ -6,12 +6,10 @@ The GitHub MCP Tools Agent is an intelligent conversational interface that bridg
 
 ## Architecture Overview
 
-```
-User Query → LLM Processing → Tool Discovery → Parameter Collection → MCP Execution
-     ↓              ↓              ↓               ↓               ↓
- Natural      Intent Analysis  Semantic Search  Interactive    Docker MCP
- Language     & Classification  (Weaviate)      Collection     Toolkit
-```
+<p align="center">
+  <img src="https://github.com/IbtissamEchchaibi19/github-mcp-agent/blob/6c2eab9b0ea31370058a99181c249260d803381e/project%20represnatation.png" alt="Architecture Diagram" width="500"/>
+</p>
+
 
 ## Core Components
 
