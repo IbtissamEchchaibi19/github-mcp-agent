@@ -1,8 +1,33 @@
 # GitHub MCP Tools Agent
+[![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://python.org)
+[![LangGraph](https://img.shields.io/badge/LangGraph-Workflow%20Engine-green.svg)](https://langchain-ai.github.io/langgraph/)
+[![Docker](https://img.shields.io/badge/Docker-MCP%20Toolkits-blue.svg)](https://docker.com)
+[![Llama](https://img.shields.io/badge/Llama-3.3%2070B-orange.svg)](https://groq.com)
+[![Weaviate](https://img.shields.io/badge/Weaviate-Vector%20DB-purple.svg)](https://weaviate.io)
+[![GitHub API](https://img.shields.io/badge/GitHub-MCP%20Server-black.svg)](https://github.com)
+
 
 ## Overview
 
 The GitHub MCP Tools Agent is an intelligent conversational interface that bridges natural language queries with GitHub's Model Context Protocol (MCP) server capabilities. This system enables users to discover, configure, and execute GitHub operations through an intuitive chat interface powered by advanced semantic search and automated parameter collection.
+```mermaid
+graph TD
+    A[Natural Language Query] --> B[Intent Analysis Engine]
+    B --> C[Semantic Tool Search]
+    C --> D[Vector Database Query]
+    D --> E[Tool Ranking & Selection]
+    E --> F[Parameter Collection Workflow]
+    F --> G[MCP Server Communication]
+    G --> H[GitHub API Execution]
+    H --> I[Response Processing]
+    I --> J[User Interface]
+    
+    K[Weaviate Vector DB] --> D
+    L[GitHub MCP Server] --> G
+    M[Llama 3.3 70B] --> B
+    M --> F
+```
+
 
 ## Architecture Overview
 
